@@ -1,6 +1,10 @@
+###############################
+##    App: Draft-Pong-Mobile ##
+## Author: Paul McGrath      ##
+###############################
 
 # UI ----
-miniPage(
+shinyUI(miniPage(
   
   # Title ---- 
   gadgetTitleBar(
@@ -77,4 +81,4 @@ miniPage(
     
   )
   
-)
+))
