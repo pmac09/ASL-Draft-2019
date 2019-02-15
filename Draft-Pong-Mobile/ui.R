@@ -55,8 +55,11 @@ shinyUI(miniPage(
     # Tab - History ----
     miniTabPanel(
       title = 'History',
-      icon = icon('history')
+      icon = icon('history'),
       
+      miniContentPanel(
+       dataTableOutput('tblStats') 
+      )
     ),
     
     # Tab - Players ----

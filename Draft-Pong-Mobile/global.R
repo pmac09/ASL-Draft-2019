@@ -1,19 +1,34 @@
-
-## PACKAGES ----
+##############
+## PACKAGES ## ----
+##############
 
 library(shiny)
 library(miniUI)
 library(shinyWidgets)
 library(tidyverse)
 library(rdrop2)
+library(Jmisc)
+
+# for local running
+#setwd('./Draft-Pong-Mobile/')
+
+###############
+## FUNCTIONS ## ----
+###############
+
+# Source all functions from folder
+sourceAll('./functions')
 
 
-## FUNCTIONS ----
+######################
+## GLOBAL VARIABLES ## ----
+######################
 
-source('./functions/test.R')
+# Read in token to access Dropbox
+gvToken <- readRDS("droptoken.rds")
 
+# Print debug output to console
+gvShowDebug <- TRUE
 
-
-## GLOBAL VARIABLES ----
-
-token <- readRDS("droptoken.rds")
+# .csv Filename for Dropbox
+gvFilename <- "ASL_DRAFT_2019.csv"
